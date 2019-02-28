@@ -1,0 +1,10 @@
+<?page title="main" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window id ="main" title="main" apply = "com.Main" border="normal">
+
+<div width="400px" style="margin-top:20px;border:1px solid silver; padding:10px;box-shadow: 0px 5px 5px #1E90FF; margin:10px;" >
+<button label="Add Rule" id="addrule" style="background-image:url('./images/btnimg.png');background-repeat:repeat-x; border:2px solid #1874CD;color:white;font-size:17px;" width="70px" height="40px"/>
+</div>
+
+</window>
+</zk>

@@ -1,0 +1,125 @@
+
+
+
+--INSERTING into "tbl_cond"
+
+SET DEFINE OFF;
+
+
+
+
+create table userinfo (email varchar(100) , passwor varchar(50));
+
+
+
+INSERT INTO USERINFO (EMAIL,PASSWOR) VALUES ('chakresh0108@GMAIL.COM','PA');
+INSERT INTO USERINFO (EMAIL,PASSWOR) VALUES ('HAA@GMAIL.COM','HAHA');
+
+
+create table tbl_cond (
+rule_name varchar(10) ,
+campaign varchar(30) ,
+condition varchar(100),
+install int ,
+impression int , 
+clicke int,
+spends real, 
+status varchar(1) , 
+action varchar(10) , 
+schedule_gap int , 
+schedule datetime, 
+start_time varchar(50)
+);
+
+
+---------------
+
+
+Insert into tbl_cond ("rule_name","campaign","install","impression","clicke","spends","status","action","condition","schedule_gap","schedule","start_time")
+ values ('Rule1','swigy',0,0,0,0.0,'D','Start','`Clicks` >= 50000 AND `Installs` <= 100',2,'2019-02-28 16:25:00.733','Thu Feb 28 04:25:47 IST 2019');
+
+
+
+Insert into tbl_cond ("rule_name","campaign","install","impression","clicke","spends","status","action","condition","schedule_gap","schedule","start_time")
+values ('Rule2','zomato',0,0,0,0.0,'D','Start','`Clicks` >= 50000 AND `Installs` <= 100',2,'2019-02-28 16:20:00.733','Thu Feb 28 04:20:47 IST 2019');
+
+
+
+Insert into tbl_cond ("rule_name","campaign","install","impression","clicke","spends","status","action","condition","schedule_gap","schedule","start_time")
+ values ('RULE5','uber',0,0,0,0.0,'D','Start','`Spend` >= $1000.00 AND `eCPC` <=  $0.20',2,'2019-02-28 16:20:00.733','Thu Feb 28 04:30:47 IST 2019');
+
+
+
+
+
+---------------------
+
+
+
+
+
+create table tbl_cond_data (
+rule_name varchar(10) ,
+campaign varchar(30) ,
+condition varchar(100),
+install int ,
+impression int , 
+clicke int,
+spends real, 
+status varchar(1) , 
+action varchar(10) , 
+schedule_gap int , 
+schedule datetime, 
+start_time varchar(50)
+);
+
+
+----------------------
+
+
+Insert into tbl_cond_data ("rule_name","campaign","install","impression","clicke","spends","status","action","condition","schedule_gap","schedule","start_time") values
+ ('Rule1','swiggy',30,400,1000,500.0,'A','Start','`Clicks` >= 50000 AND `Installs` <= 100',2,'2019-02-28 16:25:00.733','Thu Feb 28 04:25:47 IST 2019');
+
+Insert into tbl_cond_data ("rule_name","campaign","install","impression","clicke","spends","status","action","condition","schedule_gap","schedule","start_time") values
+ ('Rule1','swiggy',60,800,3000,5000.0,'A','Start','`Clicks` >= 50000 AND `Installs` <= 100',2,'2019-02-28 16:27:00.733','Thu Feb 28 04:25:47 IST 2019');
+
+
+Insert into tbl_cond_data ("rule_name","campaign","install","impression","clicke","spends","status","action","condition","schedule_gap","schedule","start_time") values
+ ('Rule1','swiggy',90,900,5000,50000.0,'A','Start','`Clicks` >= 50000 AND `Installs` <= 100',2,'2019-02-28 16:29:00.733','Thu Feb 28 04:25:47 IST 2019');
+
+
+
+
+Insert into tbl_cond_data ("rule_name","campaign","install","impression","clicke","spends","status","action","condition","schedule_gap","schedule","start_time") values 
+('Rule2','zomato',6,6,6,6.0,'A','Start','`Clicks` >= 50000 AND `Installs` <= 100',2,'2019-02-28 16:20:00.733','Thu Feb 28 04:20:47 IST 2019');
+
+
+
+Insert into tbl_cond_data ("rule_name","campaign","install","impression","clicke","spends","status","action","condition","schedule_gap","schedule","start_time") values 
+('Rule2','zomato',50,100,2000,100000.0,'A','Start','`Clicks` >= 50000 AND `Installs` <= 100',2,'2019-02-28 16:22:00.733','Thu Feb 28 04:20:47 IST 2019');
+
+
+
+Insert into tbl_cond_data ("rule_name","campaign","install","impression","clicke","spends","status","action","condition","schedule_gap","schedule","start_time") values 
+('Rule2','zomato',100,200,50000,20000.0,'A','Start','`Clicks` >= 50000 AND `Installs` <= 100',2,'2019-02-28 16:24:00.733','Thu Feb 28 04:20:47 IST 2019');
+
+
+
+
+Insert into tbl_cond_data ("rule_name","campaign","install","impression","clicke","spends","status","action","condition","schedule_gap","schedule","start_time") values
+ ('RULE5','uber',6,6,6,6.0,'D','Start','`Spend` >= $1000.00 AND `eCPC` <=  $0.20',2,'2019-02-28 16:30:00.733','Thu Feb 28 04:30:47 IST 2019');
+
+
+Insert into tbl_cond_data ("rule_name","campaign","install","impression","clicke","spends","status","action","condition","schedule_gap","schedule","start_time") values 
+('RULE5','uber',10,20,100,6.0,'A','Start','`Spend` >= $1000.00 AND `eCPC` <=  $0.20',2,'2019-02-28 16:32:00.733','Thu Feb 28 04:30:47 IST 2019');
+
+
+Insert into tbl_cond_data ("rule_name","campaign","install","impression","clicke","spends","status","action","condition","schedule_gap","schedule","start_time") values 
+('RULE5','uber',1000,200,50000,1000.0,'A','Start','`Spend` >= $1000.00 AND `eCPC` <=  $0.20',2,'2019-02-28 16:34:00.733','Thu Feb 28 04:30:47 IST 2019');
+
+
+----------------
+
+
+
+

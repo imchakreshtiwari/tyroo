@@ -1,0 +1,106 @@
+<?page id="pconfigurebranch" title="Branch Sol Master"  contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window id="wconfigurebranch" apply="com.addshow" sclass="expstyle1" height = "600px" width="100%" contentStyle="overflow:auto;position:relative">
+	<style>
+	.expstyle1 .z-window-modal-tl, .expstyle1 .z-window-modal-tr, .expstyle1 .z-window-modal-tm,
+	.expstyle1 .z-window-modal-cl, .expstyle1 .z-window-modal-cr, .expstyle1 .z-window-modal-cm,
+	.expstyle1 .z-window-modal-bl, .expstyle1 .z-window-modal-br, .expstyle1 .z-window-modal-bm,
+	.expstyle1 .z-window-modal-hl, .expstyle1 .z-window-modal-hr, .expstyle1 .z-window-modal-hm
+	{
+		background: #007DC8;
+	}
+	.expstyle1 .z-window-modal-header
+	{
+		background: #007DC8;	
+	}
+	.expstyle1 .z-textbox
+	{
+    	text-transform:uppercase;
+    }
+	</style>
+	
+  	<div align="center" width="100%" visible="true">
+              	<grid align="center" width="90%" height="null">
+              		<columns>
+              			<column width="25%"></column>
+              			<column width="60%"></column>
+              			<column width="15%"></column>
+              		</columns>
+              		<rows width="100%" height="100%">
+              			<row align="left" width="100%"
+              				height="100%">
+              				<label></label>
+              				<label value="Rule Name "></label>
+              				<textbox id="rulename" width="40%" />
+              			</row>
+              			<row align="left" width="100%"
+              				height="100%">
+              				<label></label>
+              				<label value="Campaign "></label>
+              				<combobox id="campaigncb" readonly="true"
+              					width="80%" />
+              			</row>
+              			<row align="left" width="100%"
+              				height="100%">
+              				<label></label>
+              				<label value="Schedule "></label>
+              				<textbox id="scheduletb" width="80%" />
+              			</row>
+              			<row align="left" width="100%"
+              				height="100%">
+              				<label></label>
+              				<label value="Condition "></label>
+              				<combobox id="conditioncb" readonly="true"
+              					width="80%" />
+              			</row>
+              			<row align="left" width="100%"
+              				height="100%">
+              				<label></label>
+              				<label value="Action "></label>
+              				<combobox id="actionncb" readonly="true"
+              					width="80%" />
+              			</row>
+              			<row align="left" width="100%"
+              				height="100%">
+              				<label></label>
+              				<label value="Status "></label>
+              				<combobox id="statuscb" readonly="true"
+              					width="80%" />
+              			</row>
+              			<row align="left" width="100%"
+              				height="100%">
+              				<label></label>
+              				<label value="Time"></label>
+              				<timebox id="tb3" cols="12" format="a hh:mm:ss" onCreate="self.value = new Date()" />
+              			</row>
+              			 
+              		</rows>
+              	</grid>
+              	<hbox pack="center" height="2%" width="70%"></hbox>
+                     <hbox pack="end" height="1%"  width="90%" >
+                          <hbox pack="end" height="1px"  width="30%" >
+                          	<button id="savebtn" style="background-image:url('./images/btnimg.png');background-repeat:repeat-x; color:white;font-size:12px;" label="Save" width="70px" visible="true" />
+                          </hbox>
+                     </hbox>
+               <hbox pack="center" height="2%" width="98%"></hbox>
+               </div>
+    
+    <div align="right" width="95%" id="svrfirstdiv">
+	<hbox id="svrcontroller">
+	  
+	   <button label = "Fetch" id="fetchservices" mold="trendy" class="btn btn-primary"></button>
+	</hbox></div>
+		<div align="center" id="space"></div>
+	<div id="svrdatadiv" align="center" width="100%" height="null">
+		<listbox id ="servicelistbox" height="null" mold="paging" pageSize="10" width="95%">
+          <listhead>
+              <listheader align = "center" width="15%" label="Rule Name" />
+              <listheader align = "center" width="30%" label="Campaign" />
+              <listheader align = "center" width="13%" label="Schedules" />
+              <listheader align = "center" width="13%" label="Status" />
+            <!--   <listheader align = "center" width="15%" label="      " /> -->
+          </listhead>
+       </listbox>
+	</div>
+	</window>
+</zk>
